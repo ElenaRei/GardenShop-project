@@ -6,7 +6,7 @@
 
 ## Команды для запуска API
 
-### `npm i `// use just 1 time ONLY
+### `npm i `// to be used 1 time ONLY
 ### `npm run dev `
 
 ## Ссылки API
