@@ -67,7 +67,6 @@
   font-family: 'Montserrat';
   font-weight: 600;
   font-size: 40px;
-  line-height: 130%;
   text-decoration-line: underline;
   color: #000000;
 } 
@@ -88,4 +87,40 @@
   font-family: 'Montserrat';
   font-weight: 600;
   font-size: 24px;
+}
+@media (max-width: 1000px) {
+  .footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 80px;
+    gap: 80px;
+  }
+  .footer_tel{
+    font-size: 45px;
+  } 
+
+  .footer_street{
+    font-size: 30px;
+  }
+
+  .footer_tel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .footer_tel {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer_street {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }

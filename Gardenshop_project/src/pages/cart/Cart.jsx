@@ -64,13 +64,11 @@ export default function Cart() {
             })}
 
           {totalAmount === 0 && (
-            <div>
-              <img
-                src={emtyCart}
-                alt="empty cart"
-                style={{ width: '100%', height: 400 }}
-              />
-            </div>
+            <img
+            src={emtyCart}
+            alt="empty cart"
+            style={{ width: '100%', height: 400 }}
+          />
           )}
         </div>
 

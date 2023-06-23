@@ -2,7 +2,7 @@
     display: flex;
     justify-content:space-around;
     background-color: #339933;
-    width: 1440px;
+    max-width: 1440px;
     height: 476px;
     margin: 0 auto;
     margin-top: 40px;
@@ -24,28 +24,20 @@
 }
 
 
-h1,h2,form{
-font-family: Montserrat;
-font-weight: 700;
-letter-spacing: 0.03em;
-color: #FFFFFF;
+.h1{
+    font-size: 90px;
+    color: #ffffff;
+    margin: 0;
+    margin-top: 30px;
+    }
+    
+.h2{
+    font-size: 50px;
+    color: #ffffff;
+    margin: 0;
+    
 }
 
-
-
-h1{
-font-size: 90px;
-/* line-height: 108px; */
-margin: 0;
-margin-top: 30px;
-}
-
-h2{
-font-size: 50px;
-/* line-height: 60px; */
-margin: 0;
-
-}
 .input{
     width: 473px;
     padding: 10px;
@@ -73,4 +65,56 @@ margin: 0;
     flex-direction: column;
     gap: 30px;
     margin-top: 40px;
+}
+
+@media (max-width: 1000px) {
+
+    .dwarf {
+        display: none;
+    }
+   .form_input {
+    justify-content: center;
+    align-items: center;
+   }
+}
+
+@media (max-width: 800px) {
+    .form {
+        align-items: center;
+    }
+
+    .input {
+        width: 500px;
+    }
+
+    .form_button {
+        width: 500px;
+    }
+
+    .h1,
+    .h2 {
+        font-size: 40px;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    .form {
+        align-items: center;
+    }
+
+    .input {
+        width: 300px;
+    }
+
+    .form_button {
+        width: 300px;
+    }
+
+    .h1, .h2 {
+        font-size: 30px;
+    }
+
+
 }

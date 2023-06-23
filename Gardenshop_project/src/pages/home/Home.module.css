@@ -68,3 +68,39 @@ margin: 0 auto;
   gap: 35px;
   flex-wrap: wrap;
 }
+
+@media (max-width: 1000px) {
+
+  .categoriesTitle{
+
+    justify-content: center;
+
+  } 
+
+
+
+
+  .categoriesContent{
+
+    justify-content: center;
+
+  }
+
+
+
+
+  .salesTitle {
+
+    width: auto;
+
+    text-align: center;
+
+  }
+
+  .salesContent {
+
+    justify-content: center;
+
+  }
+
+}

@@ -4,3 +4,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+@media (max-width: 1000px) {
+
+    .productList_container {
+
+        justify-content: center;
+
+    }
+
+}

@@ -113,3 +113,32 @@ font-weight: 600;
   font-size: 18px;
   color: #000000;
 }
+
+@media (max-width: 1000px) {
+  .productTitle {
+    justify-content: center;
+    column-gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .productTitle h2{
+    margin-bottom: 0;
+  }
+  .productItem{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+.productPhoto {
+    width: auto;
+    height: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

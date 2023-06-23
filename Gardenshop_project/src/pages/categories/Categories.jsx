@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchCategoriesList } from '../../requests/requests'
 import CategoryItem from '../categoryItem/CategoryItem'
-import { uniqueId } from 'lodash'
+
 
 const Categories = () => {
   const categories = useSelector((store) => store.categories.categories)
@@ -16,7 +16,7 @@ const Categories = () => {
   for (let i = 0; i < 3; i++) {
     const item = {
       title: 'Title',
-      id: uniqueId('id__'),
+      id: Date.now() + Math.random(),
       image: 'https://placehold.co/320x240',
     }
     categories.push(item)

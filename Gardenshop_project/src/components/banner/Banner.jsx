@@ -16,7 +16,7 @@ export default function Banner() {
         </a>
       </div>
 
-      <img src={plant_banner} alt="Plant" />
+      <img className={s.bannerImg} src={plant_banner} alt="Plant" />
     </div>
   )
 }

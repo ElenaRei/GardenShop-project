@@ -61,3 +61,30 @@ align-items:center;
   border-radius: 50%;
   padding: 5px;
 }
+@media (max-width: 815px) {
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .headerMenu {
+    margin-top: 30px;
+  }
+
+  .cartIcon {
+    margin-left: 40px;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .headerMenu {
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 20px;
+    }
+}

@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import {
-  discountProductsAction,
-  fromAndToFilterProductsAction,
-  sortProductsAction,
-} from '../../store/productsReducer'
+  addFromToProductsAction,
+  addSortProductsAction,
+  deleteFilteredProductsAction,
+  setFilteredProductsAction,
+} from '../../store/filtersReducer'
 import s from './Filter.module.css'
 
 const Filter = ({ sale }) => {
@@ -14,7 +15,7 @@ const Filter = ({ sale }) => {
   const dispatch = useDispatch()
 
   const onSelect = (e) => {
-    dispatch(sortProductsAction(e.target.value))
+    dispatch(addSortProductsAction(e.target.value))
   }
 
   const onForm = (event) => {
@@ -33,12 +34,19 @@ const Filter = ({ sale }) => {
 
   const onBlur = () => {
     if (to >= 1 && from >= 1) {
-      dispatch(fromAndToFilterProductsAction({ from, to }))
+      dispatch(addFromToProductsAction({ to, from }))
+      dispatch(setFilteredProductsAction('fromTo'))
+    } else {
+      dispatch(addFromToProductsAction({ to: 0, from: 0 }))
+      dispatch(deleteFilteredProductsAction('fromTo'))
     }
   }
 
   const onCheck = (event) => {
-    dispatch(discountProductsAction(event.target.checked))
+    if (event.target.checked) 
+    dispatch(setFilteredProductsAction('discount'))
+    else 
+    dispatch(deleteFilteredProductsAction('discount'))
   }
 
   return (

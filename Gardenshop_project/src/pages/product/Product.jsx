@@ -8,11 +8,12 @@ import { base_url, fetchProduct } from '../../requests/requests'
 import { useDispatch, useSelector } from 'react-redux'
 import { addProductAction, totalAmountAction } from '../../store/cartReducer'
 
+
 export default function Product() {
   const { productId } = useParams()
   const navigate = useNavigate()
   const dispatch = useDispatch()
-
+  
   const product = useSelector((store) => {
     return store.product
   })

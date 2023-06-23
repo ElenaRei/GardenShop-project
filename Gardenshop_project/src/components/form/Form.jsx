@@ -28,8 +28,8 @@ function Form() {
         <img src={dwarf} alt="dwarf" />
       </div>
       <div className={s.form_input}>
-        <h1>5% off</h1>
-        <h2>on the first order</h2>
+      <h1 className={s.h1}>5% off</h1>
+        <h2 className={s.h2}>on the first order</h2>
 
         <form onSubmit={handleSubmit}>
           <input

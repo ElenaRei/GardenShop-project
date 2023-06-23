@@ -49,5 +49,13 @@
     padding: 8px;
     font-size: 17px;
     color: grey;
-   }
-  
+ }
+
+
+ 
+  @media (max-width: 1000px) {
+  .filter {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

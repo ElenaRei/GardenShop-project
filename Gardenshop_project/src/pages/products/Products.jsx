@@ -5,34 +5,30 @@ import ProductList from '../../components/productList/ProductList'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { fetchProductList } from '../../requests/requests'
+import { filteredProducts } from '../../store/productsReducer'
 import Filter from '../../components/filter/Filter'
 
 export default function Products() {
   const dispatch = useDispatch()
-  const { products, category, filteredProducts } = useSelector(
-    (store) => store.products,
+  const { filters, fromTo, sort } = useSelector((store) => store.filters)
+
+  const { category } = useSelector((store) => store.products)
+
+  const products = useSelector((store) =>
+    filteredProducts(store, filters, fromTo, sort),
   )
 
   useEffect(() => {
-    if (filteredProducts.length <= 0) dispatch(fetchProductList())
+    if (products.length === 0) dispatch(fetchProductList())
   }, [])
 
   return (
     <div className={s.products}>
-      <h1
-        style={{
-          fontWeight: 700,
-          fontSize: '40px',
-          color: '#000000',
-          marginBottom: 60,
-        }}
-      >
-        {category.title}
-      </h1>
+      <h1 className={s.h1}>{category.title}</h1>
 
       <Filter sale={true} />
       
-      <ProductList products={filteredProducts} />
+      <ProductList products={products} />
     </div>
   )
 }

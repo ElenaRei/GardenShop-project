@@ -80,3 +80,31 @@
     width: 100%;
     height: 100%;
 }
+
+@media (max-width: 830px) {
+    .cartItem {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 460px;
+        gap: 20px;
+    }
+
+    .cartItemDesc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cartItemPrice, .cartItemSale{
+        text-align: center;
+        margin-left: 0px; margin-right: 0px;
+    }
+
+    .cartItemDesc p {
+        width: auto;
+        text-align: center;
+        margin-top: 15px;
+    }
+}
